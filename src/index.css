@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop:ital@1&display=swap');
+
+
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.about {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+
+}
+
+.quote {
+  font-family: 'Zen Loop', cursive;
+  color: #48d3d3;
+  font-size: 50px;
 }
