@@ -1,1 +1,2 @@
-export const GET_PRODUCTS_SUCCESS = "GET_PRODUCTS_SUCCESS";
+export const SET_LOADING = "SET_LOADING";
+export const SET_BLOGS = "SET_BLOGS";
