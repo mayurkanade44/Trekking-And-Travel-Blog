@@ -15,7 +15,7 @@ const BlogsList = () => {
               <Link to={`/blogs/${blog.id}`}>
                 <img
                   className="img-fluid"
-                  style={{ width: 300 }}
+                  style={{ maxHeight: 270 }}
                   src={`http://127.0.0.1:8000${blog.featured_image}`}
                   alt="name"
                 />

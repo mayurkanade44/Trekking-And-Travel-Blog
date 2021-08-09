@@ -15,7 +15,7 @@ const BlogDetails = () => {
   return (
     <div className="detail-container">
       <h1 className="blog-title">{title}</h1>
-      <p>{`by ${owner && owner.name}`}</p>
+      <p className='blog-owner'>{`by ${owner && owner.name}`}</p>
       <img
         className="blog-img"
         src={`http://127.0.0.1:8000${featured_image}`}

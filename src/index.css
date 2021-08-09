@@ -69,4 +69,12 @@ body {
   border-radius: 0.7rem;
 }
 
+.blog-owner {
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-style: italic;
+  color: aqua;
+  padding-left: 10px;
+}
+
 /*============ PROJECTS ============*/
