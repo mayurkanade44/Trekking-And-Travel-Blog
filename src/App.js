@@ -1,5 +1,6 @@
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Landing, Error, Home, Blogs, Account } from "./pages";
+import BlogDetails from "./components/BlogDetails";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         </Route>
         <Route exact path="/blogs">
           <Blogs />
+        </Route>
+        <Route exact path="/blogs/:id">
+          <BlogDetails />
         </Route>
         <Route exact path="/account">
           <Account />

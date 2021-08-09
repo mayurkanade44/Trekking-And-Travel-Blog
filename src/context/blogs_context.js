@@ -2,14 +2,15 @@ import React, { createContext, useContext, useEffect, useReducer } from "react";
 import axios from "axios";
 import reducer from "./blogs_reducer";
 
-import { SET_LOADING, SET_BLOGS } from "../actions";
+import { SET_LOADING, SET_BLOGS, SET_BLOG } from "../actions";
 
 const initialState = {
   loading: false,
   blogs: [],
+  blog: []
 };
 
-const url = "http://127.0.0.1:8000/api/blogs/";
+const url = "http://127.0.0.1:8000/api/";
 const BlogsContext = createContext();
 
 export const BlogsProvider = ({ children }) => {
@@ -18,8 +19,18 @@ export const BlogsProvider = ({ children }) => {
   const fetchBlogs = async () => {
     dispatch({ type: SET_LOADING });
     try {
-      const { data } = await axios(url);
+      const { data } = await axios(url + "blogs/");
       dispatch({ type: SET_BLOGS, payload: data });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const fetchBlogDetails = async (id) => {
+    dispatch({ type: SET_LOADING });
+    try {
+      const { data } = await axios(`${url}blogs/${id}/`);
+      dispatch({ type: SET_BLOG, payload: data });
     } catch (error) {
       console.log(error);
     }
@@ -30,7 +41,7 @@ export const BlogsProvider = ({ children }) => {
   }, []);
 
   return (
-    <BlogsContext.Provider value={{ ...state }}>
+    <BlogsContext.Provider value={{ ...state, fetchBlogDetails }}>
       {children}
     </BlogsContext.Provider>
   );

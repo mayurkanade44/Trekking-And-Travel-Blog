@@ -48,4 +48,25 @@ body {
   text-shadow: 1px 0.5px 1px white, 4px 5px 1px black;
 }
 
+/*============ BLOG DETAILS ============*/
+.detail-container {
+  margin: 4rem 15rem;
+}
+
+.blog-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: whitesmoke;
+}
+
+.blog-img {
+  margin: 1.5rem 3rem;
+  height: 55vh;
+  width: 90%;
+  object-fit: fill;
+  object-position: center;
+  margin-bottom: 2rem;
+  border-radius: 0.7rem;
+}
+
 /*============ PROJECTS ============*/
