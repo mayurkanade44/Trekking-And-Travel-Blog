@@ -5,12 +5,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BlogsProvider }  from './context/blogs_context'
+import { AuthProvider } from './context/auth_context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BlogsProvider>
-      <App />
-    </BlogsProvider>
+    <AuthProvider>
+      <BlogsProvider>
+        <App />
+      </BlogsProvider>
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

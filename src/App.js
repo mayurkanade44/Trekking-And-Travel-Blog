@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Landing, Error, Home, Blogs, Account } from "./pages";
-import { BlogDetails, NewBlog } from "./components";
+import { BlogDetails, NewBlog, Register } from "./components";
 
 function App() {
   return (
@@ -8,6 +8,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Landing />
+        </Route>
+        <Route exact path="/register">
+          <Register />
         </Route>
         <Route exact path="/home">
           <Home />
