@@ -49,6 +49,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const login = async (e) => {
+    e.preventDefault();
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -62,13 +63,14 @@ export const AuthProvider = ({ children }) => {
         config
       );
       dispatch({ type: LOGIN_SUCCESS, payload: res.data });
+      console.log('success')
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <AuthContext.Provider value={{ ...state, handleChange, register }}>
+    <AuthContext.Provider value={{ ...state, handleChange, register, login }}>
       {children}
     </AuthContext.Provider>
   );

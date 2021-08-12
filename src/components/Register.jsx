@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { useAuthContext } from "../context/auth_context";
-import { useHistory } from "react-router-dom";
 
 const Register = () => {
   const { user, handleChange, register } = useAuthContext();
