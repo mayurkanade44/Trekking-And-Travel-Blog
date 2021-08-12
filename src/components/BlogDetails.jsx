@@ -4,13 +4,12 @@ import { useBlogsContext } from "../context/blogs_context";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const { fetchBlogDetails, blog } = useBlogsContext();
-  const { title, featured_image, description, tags, owner } = blog;
+  const { fetchBlogDetails, blog_details } = useBlogsContext();
+  const { title, featured_image, description, tags, owner } = blog_details;
   useEffect(() => {
     fetchBlogDetails(id);
   }, [id]);
 
-  console.log(blog);
 
   return (
     <div className="detail-container">
